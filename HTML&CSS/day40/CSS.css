@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.content {
+  display: grid;
+  grid-template-rows: repeat(3, 128px);
+  grid-template-columns: repeat(3, 128px);
+  background-color: white;
+  border: 2px solid lightgray;
+  margin: auto;
+  gap: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pics {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  animation: enter 0.5s ease-in-out;
+}
+.pic1 {
+  transform-origin: top left;
+}
+
+.pic2 {
+  transform-origin: top center;
+}
+
+.pic3 {
+  transform-origin: top right;
+}
+
+.pic4 {
+  transform-origin: center left;
+}
+
+.pic5 {
+  transform-origin: center center;
+}
+
+.pic6 {
+  transform-origin: center right;
+}
+
+.pic7 {
+  transform-origin: bottom left;
+}
+
+.pic8 {
+  transform-origin: bottom center;
+}
+
+.pic9 {
+  transform-origin: bottom right;
+}
+.picSelected {
+  transform: scale(3.1);
+  backdrop-filter: blur(100px);
+}
+
+@keyframes enter {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
